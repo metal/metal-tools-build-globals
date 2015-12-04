@@ -24,7 +24,7 @@ describe('Metal Tools - Build Globals', function() {
       vfs.dest.restore();
     });
 
-  	it('should compile soy files from/to "src" folder by default', function() {
+    it('should compile soy files from "src" and to "build/globals" by default', function() {
       metalToolsBuildGlobals();
       assert.strictEqual('src/**/*.js', vfs.src.args[0][0]);
       assert.strictEqual('build/globals', vfs.dest.args[0][0]);
