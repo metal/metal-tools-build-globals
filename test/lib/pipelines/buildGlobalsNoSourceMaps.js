@@ -5,7 +5,7 @@ var buildGlobalsNoSourceMaps = require('../../../lib/pipelines/buildGlobalsNoSou
 var consume = require('stream-consume');
 var vfs = require('vinyl-fs');
 
-describe.only('Pipeline - Build to globals with no source maps', function() {
+describe('Pipeline - Build to globals with no source maps', function() {
 	it('should build js files to a single bundle', function(done) {
 		var stream = vfs.src('test/fixtures/js/foo.js')
       .pipe(buildGlobalsNoSourceMaps());
