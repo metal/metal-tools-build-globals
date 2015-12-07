@@ -1,14 +1,16 @@
 'use strict';
 
 var buildGlobals = require('./lib/pipelines/buildGlobals');
+var defaultOptions = require('./lib/options');
 var consume = require('stream-consume');
+var merge = require('merge');
 var vfs = require('vinyl-fs');
 
 module.exports = function (options) {
-	options  = options || {};
-	var stream = vfs.src(options.src || 'src/**/*.js')
+	options = merge({}, defaultOptions, options);
+	var stream = vfs.src(options.src)
 		.pipe(buildGlobals(options))
-		.pipe(vfs.dest(options.dest || 'build/globals'));
+		.pipe(vfs.dest(options.dest));
 	consume(stream);
 	return stream;
 };
