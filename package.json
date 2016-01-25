@@ -24,7 +24,7 @@
     "globals"
   ],
   "dependencies": {
-    "babel-preset-metal": "^1.0.3",
+    "babel-preset-metal": "^2.0.0",
     "gulp-babel-globals": "^1.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "merge": "^1.2.0",
