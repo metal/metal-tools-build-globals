@@ -33,6 +33,7 @@
     "vinyl-fs": "^2.2.1"
   },
   "devDependencies": {
+    "babel-deps": "^2.0.0",
     "del": "^2.1.0",
     "jshint": "^2.7.0",
     "mocha": "^2.2.5",
