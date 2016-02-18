@@ -1,11 +1,16 @@
 'use strict';
 
 var assert = require('assert');
+var babelDeps = require('babel-deps');
 var buildGlobalsNoSourceMaps = require('../../../lib/pipelines/buildGlobalsNoSourceMaps');
 var consume = require('stream-consume');
 var vfs = require('vinyl-fs');
 
 describe('Pipeline - Build to globals with no source maps', function() {
+	beforeEach(function() {
+		babelDeps.clearCache();
+	});
+
 	it('should build js files to a single bundle', function(done) {
 		var stream = vfs.src('test/fixtures/js/foo.js')
       .pipe(buildGlobalsNoSourceMaps());
