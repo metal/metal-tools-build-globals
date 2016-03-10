@@ -1,6 +1,6 @@
 {
   "name": "metal-tools-build-globals",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tool that can be used to build metal ES6 js files to globals format",
   "license": "BSD",
   "repository": "metal/metal-tools-build-globals",
