@@ -21,4 +21,22 @@ describe('Pipeline - Build to globals', function() {
 		});
 		consume(stream);
 	});
+
+	it('should build js files to a globals bundle without its source map', function(done) {
+		var stream = vfs.src('test/fixtures/js/foo.js')
+      .pipe(buildGlobals({
+				sourceMaps: false
+			}));
+
+		var files = [];
+    stream.on('data', function(file) {
+			files.push(file.relative);
+		});
+		stream.on('end', function() {
+			assert.strictEqual(1, files.length);
+			assert.strictEqual('metal.js', files[0]);
+			done();
+		});
+		consume(stream);
+	});
 });
