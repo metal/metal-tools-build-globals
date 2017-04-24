@@ -28,7 +28,7 @@
     "babel-preset-metal-resolve-source": "^1.0.0",
     "gulp-babel-globals": "^2.0.0",
     "gulp-if": "^2.0.0",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sourcemaps": "1.6.0",
     "merge": "^1.2.0",
     "stream-combiner": "^0.2.2",
     "stream-consume": "^0.1.0",
